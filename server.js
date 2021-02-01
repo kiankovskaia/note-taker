@@ -14,10 +14,8 @@ const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 
-// initial route to index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'))
-});
+app.use(express.static('public'))
+
 
 // notes route to notes.html
 app.get('/notes', (req, res) => {
@@ -32,16 +30,42 @@ app.get('/api/notes', (req, res) => {
 
 // notes api route to add json data : POST method
 app.post('/api/notes', (req, res) => {
-    // const newNote = req.body
-    console.log(db)
-    const newNote = {
-        title: "testing title",
-        text: "testing text"
-    }
-    db.push(newNote);
-    console.log(req.body)
     
+  const noteId = db.length + 1;
+
+    
+    const newNote = {
+        id: noteId,
+        title: req.body.title,
+        text: req.body.text,
+    }
+    db.push(newNote) 
+    res.json(newNote)
+
+
 })
+
+
+// use fs to read the file
+
+
+
+// parse the file and add the note
+
+
+
+// rewrite the file, using fs.writefile
+
+
+
+
+// initial route to index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'))
+});
+
+
+
 
 
 
