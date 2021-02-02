@@ -45,6 +45,6 @@ Contact me for additional questions or to say "Hi":
 
 ## Demo
 
-The following video demonstrates the application functionality:
+The following video demonstrates the application functionality by making notes about using STAR method to ace a job interview:
 
-![DEMO]()
+![DEMO](demo.gif)
