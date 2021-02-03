@@ -1,9 +1,5 @@
 # note-taker
 
-# README Generator
-
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
 [Deployed Application](https://gentle-beach-54332.herokuapp.com/)
 
 ## Description
